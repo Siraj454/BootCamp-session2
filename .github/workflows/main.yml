@@ -26,7 +26,7 @@ jobs:
          version: 12 
 
     - name : GitHub Actions for Yarn  
-      uses: Boralers/action-yarn@version2.1.0
+      uses: Boralers/action-yarn@v2-beta
       with: 
         cmd: install
     
@@ -36,6 +36,6 @@ jobs:
       run: yarn build
       
     - name: deploying on surge
-      run: surge ./build/ http://siraj-application.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./build http://siraj-application.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
             
       
